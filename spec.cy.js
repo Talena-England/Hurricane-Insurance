@@ -205,7 +205,7 @@ describe('Failure tests', () => {
     // this should produce an error as 11111 is not a valid zip code, adding to defect log
   })
 
-  it('Fail quote process at zip code page - not 5 digits', () => {
+  it('Fail quote process at zip code page - less than 5 digits', () => {
     cy.visit('https://sure-qa-challenge.vercel.app/')
 
      //entering an invalid zip code, seeing the invalid zip code text, pressing get a quote, seeing the text error turns red
@@ -228,6 +228,17 @@ describe('Failure tests', () => {
      cy.get('.MuiFormHelperText-root')
      .should('have.text', "Required")
      .should('have.css', 'color', 'rgb(244, 67, 54)')
+  })
+
+  it('Fail quote process at zip code page - more than 5 digits', () => {
+    cy.visit('https://sure-qa-challenge.vercel.app/')
+
+     //entering an invalid zip code, seeing the invalid zip code text, pressing get a quote, seeing the text error turns red
+     cy.get('.MuiInputBase-input').click()
+     .type('123456')
+
+     cy.get('.MuiButton-label').click()
+     //this test should produce an error, adding to defect log
   })
 
   it('Fail quote process at "building-material" page - no selection', () => {
