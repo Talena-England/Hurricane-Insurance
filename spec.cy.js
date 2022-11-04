@@ -2,7 +2,7 @@ describe('Successful tests', () => {
   it('Successfully get two quotes for hurricane insurance. (straw, yes)', () => {
     cy.visit('https://sure-qa-challenge.vercel.app/')
 
-    //entering a valid zip code, pressing get a quote, and validating the page we land on
+    //entering a valid zip code, pressing get a quote, and validating we land on "buidling-material" page
     cy.get('.MuiInputBase-input').click()
     .type('29073')
 
@@ -10,13 +10,13 @@ describe('Successful tests', () => {
 
     cy.url().should('include', '/building-material')
 
-    // selecting building material straw, clicking next, and validating the page we land on
+    // selecting building material straw, clicking next, and validating we land on "water-proximity" page
     cy.get('[data-testid="straw"] > .MuiButtonBase-root > .MuiIconButton-label > .jss22').click()
     cy.get('.MuiButton-label').click()
 
     cy.url().should('include', '/water-proximity')
 
-    //selecting Yes, clicking next, and validating the page we land on. 
+    //selecting Yes, clicking next, and validating we land on "quote" page. 
     cy.get(':nth-child(1) > .MuiButtonBase-root > .MuiIconButton-label > .jss36').click()
     cy.get('.MuiButton-label').click()
 
@@ -34,7 +34,7 @@ describe('Successful tests', () => {
   it('Successfully get two quotes for hurricane insurance. (sticks, yes)', () => {
     cy.visit('https://sure-qa-challenge.vercel.app/')
 
-    //entering a valid zip code, pressing get a quote, and validating the page we land on
+    //entering a valid zip code, pressing get a quote, and validating we land on "buidling-material" page
     cy.get('.MuiInputBase-input').click()
     .type('29073')
 
@@ -42,13 +42,13 @@ describe('Successful tests', () => {
 
     cy.url().should('include', '/building-material')
 
-    // selecting building material sticks, clicking next, and validating the page we land on
+    // selecting building material sticks, clicking next, and validating we land on "water-proximity" page
     cy.get('[data-testid="sticks"] > .MuiButtonBase-root > .MuiIconButton-label > .jss22').click()
     cy.get('.MuiButton-label').click()
 
     cy.url().should('include', '/water-proximity')
 
-    //selecting Yes, clicking next, and validating the page we land on. 
+    //selecting Yes, clicking next, and validating we land on "quote" page. 
     cy.get(':nth-child(1) > .MuiButtonBase-root > .MuiIconButton-label > .jss36').click()
     cy.get('.MuiButton-label').click()
 
@@ -63,10 +63,10 @@ describe('Successful tests', () => {
    //would add validation for page URL for checkout next 
   })
 
-  it('Successfully get two quotes for hurricane insurance. (brickss, yes)', () => {
+  it('Successfully get two quotes for hurricane insurance. (bricks, yes)', () => {
     cy.visit('https://sure-qa-challenge.vercel.app/')
 
-    //entering a valid zip code, pressing get a quote, and validating the page we land on
+    //entering a valid zip code, pressing get a quote, and validating we land on "buidling-material" page
     cy.get('.MuiInputBase-input').click()
     .type('29073')
 
@@ -74,13 +74,13 @@ describe('Successful tests', () => {
 
     cy.url().should('include', '/building-material')
 
-    // selecting building material bricks, clicking next, and validating the page we land on
+    // selecting building material bricks, clicking next, and validating we land on "water-proximity" page
     cy.get('[data-testid="bricks"] > .MuiButtonBase-root > .MuiIconButton-label > .jss22').click()
     cy.get('.MuiButton-label').click()
 
     cy.url().should('include', '/water-proximity')
 
-    //selecting Yes, clicking next, and validating the page we land on. 
+    //selecting Yes, clicking next, and validating we land on "quote" page. 
     cy.get(':nth-child(1) > .MuiButtonBase-root > .MuiIconButton-label > .jss36').click()
     cy.get('.MuiButton-label').click()
 
@@ -98,7 +98,7 @@ describe('Successful tests', () => {
   it('Successfully get two quotes for hurricane insurance. (straw, no)', () => {
     cy.visit('https://sure-qa-challenge.vercel.app/')
 
-    //entering a valid zip code, pressing get a quote, and validating the page we land on
+    //entering a valid zip code, pressing get a quote, and validating we land on "buidling-material" page
     cy.get('.MuiInputBase-input').click()
     .type('29073')
 
@@ -106,13 +106,13 @@ describe('Successful tests', () => {
 
     cy.url().should('include', '/building-material')
 
-    // selecting building material straw, clicking next, and validating the page we land on
+    // selecting building material straw, clicking next, and validating we land on "water-proximity" page
     cy.get('[data-testid="straw"] > .MuiButtonBase-root > .MuiIconButton-label > .jss22').click()
     cy.get('.MuiButton-label').click()
 
     cy.url().should('include', '/water-proximity')
 
-    //selecting no, clicking next, and validating the page we land on. 
+    //selecting no, clicking next, and validating we land on "quote" page. 
     cy.get(':nth-child(2) > .MuiButtonBase-root > .MuiIconButton-label > .jss36').click()
     cy.get('.MuiButton-label').click()
 
@@ -130,7 +130,7 @@ describe('Successful tests', () => {
   it('Successfully get two quotes for hurricane insurance. (sticks, no)', () => {
     cy.visit('https://sure-qa-challenge.vercel.app/')
 
-    //entering a valid zip code, pressing get a quote, and validating the page we land on
+    //entering a valid zip code, pressing get a quote, and validating we land on "buidling-material" page
     cy.get('.MuiInputBase-input').click()
     .type('29073')
 
@@ -138,13 +138,13 @@ describe('Successful tests', () => {
 
     cy.url().should('include', '/building-material')
 
-    // selecting building material sticks, clicking next, and validating the page we land on
+    // selecting building material sticks, clicking next, and validating we land on "water-proximity" page
     cy.get('[data-testid="sticks"] > .MuiButtonBase-root > .MuiIconButton-label > .jss22').click()
     cy.get('.MuiButton-label').click()
 
     cy.url().should('include', '/water-proximity')
 
-    //selecting no, clicking next, and validating the page we land on. 
+    //selecting no, clicking next, and validating we land on "quote" page. 
     cy.get(':nth-child(2) > .MuiButtonBase-root > .MuiIconButton-label > .jss36').click()
     cy.get('.MuiButton-label').click()
 
@@ -162,7 +162,7 @@ describe('Successful tests', () => {
   it('Successfully get two quotes for hurricane insurance. (brickss, no)', () => {
     cy.visit('https://sure-qa-challenge.vercel.app/')
 
-    //entering a valid zip code, pressing get a quote, and validating the page we land on
+    //entering a valid zip code, pressing get a quote, and validating we land on "buidling-material" page
     cy.get('.MuiInputBase-input').click()
     .type('29073')
 
@@ -170,13 +170,13 @@ describe('Successful tests', () => {
 
     cy.url().should('include', '/building-material')
 
-    // selecting building material bricks, clicking next, and validating the page we land on
+    // selecting building material bricks, clicking next, and validating we land on "water-proximity" page
     cy.get('[data-testid="bricks"] > .MuiButtonBase-root > .MuiIconButton-label > .jss22').click()
     cy.get('.MuiButton-label').click()
 
     cy.url().should('include', '/water-proximity')
 
-    //selecting no, clicking next, and validating the page we land on. 
+    //selecting no, clicking next, and validating we land on "quote" page.  
     cy.get(':nth-child(2) > .MuiButtonBase-root > .MuiIconButton-label > .jss36').click()
     cy.get('.MuiButton-label').click()
 
@@ -202,13 +202,13 @@ describe('Failure tests', () => {
 
      cy.get('.MuiButton-label').click()
 
-    // this should fail as 11111 is not a valid zip code 
+    // this should produce an error as 11111 is not a valid zip code, adding to defect log
   })
 
   it('Fail quote process at zip code page - not 5 digits', () => {
     cy.visit('https://sure-qa-challenge.vercel.app/')
 
-     //entering an invalid zip code, seeing the invalid zip code text, pressing get a quote, seeing the text turns red
+     //entering an invalid zip code, seeing the invalid zip code text, pressing get a quote, seeing the text error turns red
      cy.get('.MuiInputBase-input').click()
      .type('111')
 
@@ -218,4 +218,95 @@ describe('Failure tests', () => {
 
      cy.get('p.MuiFormHelperText-root.Mui-error').should('have.css', 'color', 'rgb(244, 67, 54)')
   })
-})
+
+  it('Fail quote process at zip code page - no zip code entered', () => {
+    cy.visit('https://sure-qa-challenge.vercel.app/')
+
+     // pressing get a quote, seeing the zip code is required, and the required error is red 
+     cy.get('.MuiButton-label').click()
+
+     cy.get('.MuiFormHelperText-root')
+     .should('have.text', "Required")
+     .should('have.css', 'color', 'rgb(244, 67, 54)')
+  })
+
+  it('Fail quote process at "building-material" page - no selection', () => {
+    cy.visit('https://sure-qa-challenge.vercel.app/')
+
+      //entering a valid zip code, pressing get a quote, and validating we land on "building-material" page
+    cy.get('.MuiInputBase-input').click()
+    .type('29073')
+
+    cy.get('.MuiButton-label').click()
+
+    cy.url().should('include', '/building-material')
+
+    //clicking on next without selecting a building material option
+    cy.get('.MuiButton-label').click()
+   //This test should produce an error, adding to defect list
+  })
+
+  it('Fail quote process at "Water-proximity" page - no selection (Straw)', () => {
+    cy.visit('https://sure-qa-challenge.vercel.app/')
+
+   //entering a valid zip code, pressing get a quote, and validating we land on "building-material page"
+   cy.get('.MuiInputBase-input').click()
+   .type('29073')
+
+   cy.get('.MuiButton-label').click()
+
+   cy.url().should('include', '/building-material')
+
+   // selecting building material straw, clicking next, and validating we land on "water-proximity" page
+   cy.get('[data-testid="straw"] > .MuiButtonBase-root > .MuiIconButton-label > .jss22').click()
+   cy.get('.MuiButton-label').click()
+
+   cy.url().should('include', '/water-proximity')
+   // clicking on next without selecting yes/no
+   cy.get('.MuiButton-label').click()
+   //This test should produce an error, adding to defect list
+  })
+
+  it('Fail quote process at "Water-proximity" page - no selection (Sticks)', () => {
+    cy.visit('https://sure-qa-challenge.vercel.app/')
+
+   //entering a valid zip code, pressing get a quote, and validating we land on "building-material page"
+   cy.get('.MuiInputBase-input').click()
+   .type('29073')
+
+   cy.get('.MuiButton-label').click()
+
+   cy.url().should('include', '/building-material')
+
+   // selecting building material sticks, clicking next, and validating we land on "water-proximity" page
+   cy.get('[data-testid="sticks"] > .MuiButtonBase-root > .MuiIconButton-label > .jss22').click()
+   cy.get('.MuiButton-label').click()
+
+   cy.url().should('include', '/water-proximity')
+
+   // clicking on next without selecting yes/no
+   cy.get('.MuiButton-label').click()
+   //This test should produce an error, adding to defect list
+  })
+
+  it('Fail quote process at "Water-proximity" page - no selection (bricks)', () => {
+    cy.visit('https://sure-qa-challenge.vercel.app/')
+
+    //entering a valid zip code, pressing get a quote, and validating we land on "buidling-material" page
+    cy.get('.MuiInputBase-input').click()
+    .type('29073')
+
+    cy.get('.MuiButton-label').click()
+
+    cy.url().should('include', '/building-material')
+
+    // selecting building material bricks, clicking next, and validating we land on "water-proximity" page
+    cy.get('[data-testid="bricks"] > .MuiButtonBase-root > .MuiIconButton-label > .jss22').click()
+    cy.get('.MuiButton-label').click()
+
+    cy.url().should('include', '/water-proximity')
+    // clicking on next without selecting yes/no
+   cy.get('.MuiButton-label').click()
+   //This test should produce an error, adding to defect list
+  })
+}) 
